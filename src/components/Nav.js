@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import hamburgerIcon from '../assets/hamburger_icon.svg';
 
 function Nav() {
@@ -22,12 +23,12 @@ function Nav() {
             {/* Navigation Links */}
             <div className="nav-links">
                 <ul>
-                    <li><a href="/" onClick={closeMenu}>Home</a></li>
-                    <li><a href="#about" onClick={closeMenu}>About</a></li>
-                    <li><a href="#menu" onClick={closeMenu}>Menu</a></li>
-                    <li><a href="#reservations" onClick={closeMenu}>Reservations</a></li>
-                    <li><a href="#order-online" onClick={closeMenu}>Order Online</a></li>
-                    <li><a href="#login" onClick={closeMenu}>Login</a></li>
+                    <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+                    <li><Link to="#" onClick={closeMenu}>About</Link></li>
+                    <li><Link to="#" onClick={closeMenu}>Menu</Link></li>
+                    <li><Link to="/booking" onClick={closeMenu}>Reservations</Link></li>
+                    <li><Link to="#" onClick={closeMenu}>Order Online</Link></li>
+                    <li><Link to="#" onClick={closeMenu}>Login</Link></li>
                 </ul>
             </div>
         </nav>
