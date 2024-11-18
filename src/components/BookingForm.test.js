@@ -45,7 +45,6 @@ test("Form submission calls handleSubmit", () => {
     expect(mockHandleSubmit).toHaveBeenCalled();
 });
 
-// Test HTML5 validation attributes
 test("HTML5 validation attributes are applied", () => {
     render(
         <BookingForm
@@ -79,7 +78,6 @@ test("HTML5 validation attributes are applied", () => {
     expect(occasionSelect).toBeRequired();
 });
 
-// Test disabling submit button based on form validation
 test("Submit button is disabled when form is invalid", () => {
     render(
         <BookingForm
@@ -97,7 +95,7 @@ test("Submit button is disabled when form is invalid", () => {
     );
 
     const submitButton = screen.getByText("Make Your Reservation");
-    expect(submitButton).toBeDisabled(); // Should be disabled with invalid form inputs
+    expect(submitButton).toBeDisabled();
 });
 
 test("Submit button is enabled when form is valid", () => {
@@ -117,5 +115,5 @@ test("Submit button is enabled when form is valid", () => {
     );
 
     const submitButton = screen.getByText("Make Your Reservation");
-    expect(submitButton).not.toBeDisabled(); // Should be enabled with valid form inputs
+    expect(submitButton).not.toBeDisabled();
 });

@@ -59,6 +59,10 @@ p {
   color: var(--dark-gray);
 }
 
+main {
+  min-height: 100vh;
+}
+
 /* Common Classes */
 .highlight-item,
 .testimonial-item,
@@ -228,8 +232,8 @@ button:active {
 
 .highlight-item,
 .testimonial-item {
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: var(--off-white);
+  border: 1px solid var(--light-gray);
   padding: 15px;
   text-align: center;
 }
@@ -432,7 +436,7 @@ footer a:hover {
   display: flex;
   justify-content: space-evenly;
   gap: 20px;
-  /* Adds some space between the form and the table */
+
 }
 
 .table-container {
@@ -447,13 +451,13 @@ table {
 
 th,
 td {
-  border: 1px solid #ddd;
+  border: 1px solid var(--light-gray);
   padding: 8px;
   text-align: left;
 }
 
 th {
-  background-color: #f4f4f4;
+  background-color: var(--off-white);
 }
 
 
@@ -477,13 +481,13 @@ form input,
 form select {
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--light-gray);
   border-radius: 5px;
 }
 
 form button[type="submit"] {
   background-color: var(--primary-green);
-  color: white;
+  color: var(--off-white);
   border: none;
   cursor: pointer;
   padding: 10px 20px;
@@ -492,12 +496,12 @@ form button[type="submit"] {
 
 form button[type="submit"]:hover {
   background-color: var(--light-green);
-  color: #000;
+  color: var(--);
 }
 
 form button[type="submit"]:disabled {
-  background-color: #ddd;
-  color: #666;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
   cursor: not-allowed;
 }
 

@@ -21,6 +21,6 @@ test("Navigates to the booking page", () => {
         </MemoryRouter>
     );
 
-    const bookingPageHeading = screen.getByText(/Booking Page/i);
+    const bookingPageHeading = screen.getByText(/Reserve a table for your next meal/i);
     expect(bookingPageHeading).toBeInTheDocument();
 });

@@ -10,7 +10,7 @@ function ConfirmedBooking() {
     return (
         <>
             <PageTitle h1="Book a Table" h2="Booking Confirmed!" />
-            <div className="container" style={{ minHeight: "50vh" }}>
+            <div className="container">
                 <p>Thank you for reserving a table at Little Lemon. We look forward to serving you!</p>
                 <Link to="/"><button>Back to Home</button></Link>
             </div>
