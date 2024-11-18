@@ -23,9 +23,9 @@ function Footer() {
                         <a href="info@littlelemon.com">info@littlelemon.com</a>
                     </address>
                     <div><p><b>Social Media</b></p>
-                        <p><a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a></p>
-                        <p><a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a></p>
-                        <p><a href="https://www.twitter.com" target="_blank" rel="noreferrer">Twitter</a></p>
+                        <p><a href="https://www.facebook.com" target="_blank" rel="noreferrer" aria-label="Visit us on Facebook">Facebook</a></p>
+                        <p><a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Visit us on Instagram">Instagram</a></p>
+                        <p><a href="https://www.twitter.com" target="_blank" rel="noreferrer" aria-label="Visit us on Twitter">Twitter</a></p>
                     </div>
                 </footer>
             </div >

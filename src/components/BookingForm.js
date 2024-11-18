@@ -10,6 +10,7 @@ function BookingForm({
     availableTimes,
     handleSubmit,
 }) {
+    const isFormValid = date && time && guests >= 1 && guests <= 10 && occasion;
     return (
         <form onSubmit={handleSubmit}>
             <label htmlFor="res-date">Choose date</label>
@@ -50,12 +51,18 @@ function BookingForm({
                 min="1"
                 max="10"
                 value={guests}
-                onChange={(e) => setGuests(e.target.value)}
+                onChange={(e) => {
+                    const guestsValue = parseInt(e.target.value);
+                    if (guestsValue >= 1 && guestsValue <= 10) {
+                        setGuests(guestsValue);
+                    }
+                }
+                }
                 required
                 aria-label="Number of guests"
                 aria-describedby="guests-description"
             />
-            <p id="guests-description">Enter the number of guests for the reservation. Minimum 1, maximum 10.</p>
+            <p id="guests-description">Enter the number of guests for the reservation. <span>Minimum 1, maximum 10.</span></p>
 
             <label htmlFor="occasion">Occasion</label>
             <select
@@ -72,11 +79,13 @@ function BookingForm({
             </select>
             <p id="occasion-description">Select the occasion for the reservation.</p>
 
-            <input
+            <button
                 type="submit"
-                value="Make Your Reservation"
                 aria-label="Submit your reservation"
-            />
+                disabled={!isFormValid}
+            >
+                Make Your Reservation
+            </button>
         </form>
     );
 }

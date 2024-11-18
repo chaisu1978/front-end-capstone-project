@@ -140,29 +140,35 @@ header img {
 }
 
 /* Hero Section */
-.hero {
+.hero,
+.page-title {
   background-color: var(--primary-green);
   padding: 40px 0;
 }
 
-.hero .container {
+.hero .container,
+.page-title .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.hero-text {
+.hero-text,
+.page-title-text {
   flex: 1;
   text-align: start;
 }
 
 .hero h1,
-.hero h2 {
+.page-title h1,
+.hero h2,
+.page-title h2 {
   margin: 0;
   color: var(--accent-yellow);
 }
 
-.hero h1 {
+.hero h1,
+.page-title h1 {
   font-weight: bold;
 }
 
@@ -424,13 +430,13 @@ footer a:hover {
 
 .form-and-table {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 20px;
   /* Adds some space between the form and the table */
 }
 
 .table-container {
-  flex: 0.5;
+  flex: 1;
 
 }
 
@@ -454,7 +460,7 @@ th {
 
 form {
   display: grid;
-  max-width: 300px;
+  max-width: 600px;
   gap: 20px;
   margin: 0 auto;
   padding-bottom: 60px;
@@ -475,7 +481,7 @@ form select {
   border-radius: 5px;
 }
 
-form input[type="submit"] {
+form button[type="submit"] {
   background-color: var(--primary-green);
   color: white;
   border: none;
@@ -484,9 +490,22 @@ form input[type="submit"] {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-form input[type="submit"]:hover {
+form button[type="submit"]:hover {
   background-color: var(--light-green);
   color: #000;
+}
+
+form button[type="submit"]:disabled {
+  background-color: #ddd;
+  color: #666;
+  cursor: not-allowed;
+}
+
+#guests-description span {
+  color: var(--hard-peach);
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
 }
 
 /* Media Queries */
@@ -503,7 +522,8 @@ form input[type="submit"]:hover {
 
   .highlight-item,
   .testimonial-item,
-  .hero-text {
+  .hero-text,
+  .page-title-text {
     margin: 0 20px;
   }
 }

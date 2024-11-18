@@ -3,7 +3,7 @@ import about2 from '../assets/about2.jpg';
 
 function Chicago() {
     return (
-        <div className="container-fluid about">
+        <section className="container-fluid about">
             <div className="container about-content">
                 <div className="about-text">
                     <h2 className="about-h2">Little Lemon</h2>
@@ -21,7 +21,7 @@ function Chicago() {
                     <img src={about1} alt="About Little Lemon 2" className="about-image overlay" />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

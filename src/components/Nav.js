@@ -16,7 +16,7 @@ function Nav() {
     return (
         <nav className={isOpen ? 'active' : ''}>
             {/* Hamburger Button */}
-            <button className="hamburger" aria-label="Toggle menu" onClick={toggleMenu}>
+            <button className="hamburger" aria-label="Toggle menu" aria-expanded={isOpen} onClick={toggleMenu}>
                 <img src={hamburgerIcon} alt="Hamburger Icon" />
             </button>
 

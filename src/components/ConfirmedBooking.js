@@ -1,9 +1,20 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import PageTitle from "./PageTitle";
+
 function ConfirmedBooking() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
-        <div className="container">
-            <h1>Booking Confirmed!</h1>
-            <p>Thank you for reserving a table at Little Lemon. We look forward to serving you!</p>
-        </div>
+        <>
+            <PageTitle h1="Book a Table" h2="Booking Confirmed!" />
+            <div className="container" style={{ minHeight: "50vh" }}>
+                <p>Thank you for reserving a table at Little Lemon. We look forward to serving you!</p>
+                <Link to="/"><button>Back to Home</button></Link>
+            </div>
+        </>
     );
 }
 
