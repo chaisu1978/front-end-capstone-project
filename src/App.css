@@ -613,5 +613,6 @@ form button[type="submit"]:disabled {
 
   .form-and-table {
     flex-direction: column;
+    padding: 20px;
   }
 }
